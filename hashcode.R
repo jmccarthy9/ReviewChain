@@ -4,7 +4,7 @@ library(tidyverse)
 library(dplyr)
 library(digest)
 
-students <- read_sheet("https://docs.google.com/spreadsheets/d/1RWrNjk72DvpefK6qkMEAVmfwwr8EcNnW4Uy9NaJMddc/edit#gid=0")
+students <- read_sheet("https://docs.google.com/spreadsheets/d/#your#link#here/edit#gid=0")
 students <- students %>% 
   rowwise() %>% 
   mutate(review_hash = digest(review_column)) 
